@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import userDashboardData from '../../mockApi/userDashboardApi'
 import PowerSettingsNewRoundedIcon from "@mui/icons-material/PowerSettingsNewRounded";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import BorderColorRoundedIcon from "@mui/icons-material/BorderColorRounded";
-import taskApiData from '../../mockApi/taskApiData';
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Calendar from 'react-calendar';
-import eventsApiData from '../../mockApi/eventsApiData';
 import hexToRGB from '../../helpers/hexToRGB';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import leaveApiData from '../../mockApi/leaveApiData';
 import attendanceApiData from '../../mockApi/attendanceApiData';
+import TaskLog from '../dashboard components/TaskLog';
+import Events from '../dashboard components/Events';
+import Leaves from '../dashboard components/Leaves';
+import Attendance from '../dashboard components/Attendance';
 // import 'react-calendar/dist/Calendar.css';
 
 const MainDasboard = () => {
@@ -141,7 +137,7 @@ const MainDasboard = () => {
         <div className='w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5'>
 
             {/* grid item - task log */}
-            <div className='col-start-1 col-end-4 row-start-1 md:row-end-3 w-full bg-white flex flex-col items-center px-6 rounded-xl shadow-md max-h-[370px]'>
+            {/* <div className='col-start-1 col-end-4 row-start-1 md:row-end-3 w-full bg-white flex flex-col items-center px-6 rounded-xl shadow-md max-h-[370px]'>
                 <div className='w-full pb-2 pt-3'>
                     <div className='w-full flex items-center pb-3'>
                         <div className='w-full'>
@@ -171,24 +167,20 @@ const MainDasboard = () => {
                                 <h1 className='text-[14px] w-full text-left font-[500] text-[#525252]'>{data?.task}</h1>
                                 <h1 className='text-[14px] w-full text-left font-[500] text-[#525252]'>{data?.projects}</h1>
                                 <h1 className='text-[14px] w-full text-left font-[500] text-[#525252]'>{data?.remarks}</h1>
-                                {/* <input type="text" placeholder='Enter date' className='text-[14px] w-full mx-2' />
-                                <input type="text" placeholder='Enter task' className='text-[14px] w-full mx-2' />
-                                <input type="text" placeholder='Enter project' className='text-[14px] w-full mx-2' />
-                                <input type="text" placeholder='Enter remarks' className='text-[14px] w-full mx-2' /> */}
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <TaskLog />
 
             {/* grid item - calender */}
             <div className='w-full bg-white border-4 border-[#5f65e19f] md:row-start-1 md:row-end-3 col-start-1 md:col-start-4 col-end-4 md:col-end-5 px-2 rounded-xl shadow-md py-2 max-h-[370px]'>
-                {/* <h1 className='text-[18px] font-[500]'>calender</h1> */}
-                <Calendar   />
+                <Calendar />
             </div>
 
             {/* grid item - events */}
-            <div className='w-full bg-white col-start-1 md:col-start-1 col-end-4 md:col-end-2  px-2 rounded-xl shadow-md py-2 '>
+            {/* <div className='w-full bg-white col-start-1 md:col-start-1 col-end-4 md:col-end-2  px-2 rounded-xl shadow-md py-2 '>
                 <div className='w-[95%] mx-auto pt-2'>
                     <div className='w-full flex justify-between items-center pb-4'>
                         <div className='w-full flex justify-start'>
@@ -199,14 +191,12 @@ const MainDasboard = () => {
                             <span><KeyboardArrowDownIcon fontSize='medium' /></span>
                         </button>
                     </div>
-                    {/* <div className='h-[1px] w-[95%] mx-auto bg-[#696969b6]'></div> */}
                 </div>
                     <div className='w-[95%] mx-auto relative max-h-[320px] overflow-y-scroll'>
                         {
                             eventsApiData?.content?.map((data, index) => {
                                 return (
                                     <div className='w-full border-b border-b-[#696969b6]' key={index}>
-                                    {/* {console.log(hexToRGB(data?.color, 50))}    */}
                                     <h1 className='text-[15px] py-2 text-[#353535] font-[600]'>{data?.event_name}</h1>
                                     <div className='w-full flex justify-between py-2 text-[#525252]'>
                                         <h1 className={`text-[12px]`}>{data?.event_date}</h1>
@@ -217,10 +207,11 @@ const MainDasboard = () => {
                             })
                         }
                     </div>
-            </div>
+            </div> */}
+            <Events />
 
             {/* grid item - leaves */}
-            <div className='w-full bg-white px-2 rounded-xl shadow-md pt-2 col-start-1 col-end-4 md:col-start-2 md:col-end-3'>
+            {/* <div className='w-full bg-white px-2 rounded-xl shadow-md pt-2 col-start-1 col-end-4 md:col-start-2 md:col-end-3'>
                 <div className='w-[95%] mx-auto pb-2'>
                     <div className='w-full flex items-center justify-between pt-3'>
                         <div className=''>
@@ -256,10 +247,11 @@ const MainDasboard = () => {
                         ))
                     }
                     </div>
-            </div>
+            </div> */}
+            <Leaves />
 
             {/* grid item - attendance */}
-            <div className='w-full bg-white px-2 rounded-xl shadow-md py-2 col-start-1 col-end-4 md:col-start-3 md:col-end-5'>
+            {/* <div className='w-full bg-white px-2 rounded-xl shadow-md py-2 col-start-1 col-end-4 md:col-start-3 md:col-end-5'>
                 <div className='w-[95%] mx-auto pt-2'>
                     <h1 className='text-[18px] md:text-[20px] font-[500]'>Attendance</h1>
                 </div>
@@ -285,7 +277,8 @@ const MainDasboard = () => {
                         }
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <Attendance />
         </div>
 
     </div>
