@@ -1,5 +1,6 @@
 const attendanceApiData = {
     header:[ {label: 'Date'}, {label: 'Check-In'}, {label: 'Check-Out'}, {label: 'Duration'}, {label: 'Status'}],
+    header_obj: {date: 'Date', check_in: 'Check-In', check_out: 'Check-Out', duration: 'Duration', status: 'Status'},
     content: [
         {date: '01/12/2022', check_in: '8:13am', check_out: '5:45pm', status: 'WFO' , duration: '9 hrs 32 mins'},
         {date: '03/12/2022', check_in: '8:05am', check_out: '5:15pm', status: 'WFO' , duration: '9 hrs 10 mins'},
