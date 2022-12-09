@@ -21,7 +21,7 @@ const Events = () => {
                         <span><KeyboardArrowDownIcon fontSize='medium'/></span>
                     </button>
                 </div>
-                <div className={`absolute top-[70%] right-[3%] rounded-lg min-w-[100px] overflow-hidden transition-all duration-300 z-[90] bg-[#fff] shadow-2xl ${ popUpToggle ? 'border border-[#eeeded] px-4 py-2 h-[300px] overflow-y-scroll ease-in' : 'h-0 ease-out p-0' }`}>
+                <div className={`absolute top-[70%] right-[3%] rounded-lg min-w-[130px] overflow-hidden transition-all duration-300 z-[90] bg-[#fff] shadow-2xl ${ popUpToggle ? 'border border-[#eeeded] px-4 py-2 h-[300px] overflow-y-scroll ease-in' : 'h-0 ease-out p-0' }`}>
                     {
                         monthList?.map((data, i) => (
                             <h1 key={i} className='py-2 border-b border-b-[#6969692c] text-[13px] text-[#696969d5] hover:text-black transition-all cursor-pointer'>{data?.longName}</h1>
