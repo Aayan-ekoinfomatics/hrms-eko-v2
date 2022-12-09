@@ -50,17 +50,17 @@ const LoginPage = () => {
             </div>
             <div className=' my-3'>
                 <div className='flex items-center rounded-md border border-[#69696946]'>
-                <input type={showPassword ? 'text' : 'password'} className='w-full rounded-md pl-2 py-[10px] text-[13px] focus:outline-[#5f66e1]' placeholder='Password' ref={passwordRef} />
-                <div className='px-1 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
-                    {
-                        showPassword ?
-                        <VisibilityRoundedIcon  fontSize="small"
-                        className="text-[#5f66e1]" />
-                        :
-                        <VisibilityOffRoundedIcon  fontSize="small"
-                        className="text-[#b8bcff]" />
-                    }
-                </div>
+                    <input type={showPassword ? 'text' : 'password'} className='w-full rounded-md pl-2 py-[10px] text-[13px] focus:outline-[#5f66e1]' placeholder='Password' ref={passwordRef} />
+                    <div className='px-1 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
+                        {
+                            showPassword ?
+                            <VisibilityRoundedIcon  fontSize="small"
+                            className="text-[#5f66e1]" />
+                            :
+                            <VisibilityOffRoundedIcon  fontSize="small"
+                            className="text-[#b8bcff]" />
+                        }
+                    </div>
                 </div>
 
                 {
