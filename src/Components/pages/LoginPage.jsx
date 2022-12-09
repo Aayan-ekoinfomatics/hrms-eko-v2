@@ -2,12 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import img from '../../assets/icons/eko_logo.svg'
 import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 import VisibilityOffRoundedIcon from "@mui/icons-material/VisibilityOffRounded";
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
     const [errorText, setErrorText] = useState(null);
+
+    const navigate = useNavigate()
 
     const emailRef = useRef(null)
     const passwordRef = useRef(null)
@@ -19,11 +22,12 @@ const LoginPage = () => {
         if(emailRef?.current?.value?.length === 0 || passwordRef?.current?.value?.length === 0) {
             setErrorText('Please fill both the fields')
         }else {
-            console.log('email: ', emailRef?.current?.value)
-            console.log('password: ', passwordRef?.current?.value)
+            // console.log('email: ', emailRef?.current?.value)
+            // console.log('password: ', passwordRef?.current?.value)
 
             localStorage.setItem('email', emailRef?.current?.value)
             localStorage.setItem('password', passwordRef?.current?.value)
+            navigate('/')
         }
         
     }

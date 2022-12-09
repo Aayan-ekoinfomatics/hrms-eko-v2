@@ -46,9 +46,12 @@ body {
 }
 .react-calendar button:enabled:hover {
   cursor: pointer;
+  /* transform: scaleX(1.1);
+  transition: all;
+  transition: 5ms; */
   /* border-radius: 20%; */
-  background-color: #5f66e1;
-  color: white;
+  /* background-color: #5f66e1; */
+  /* color: white; */
 }
 .react-calendar__navigation {
   display: flex;

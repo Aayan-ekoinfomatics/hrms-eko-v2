@@ -12,7 +12,7 @@ const Events = () => {
     return (
         <div className='w-full bg-white col-start-1 md:col-start-1 col-end-4 md:col-end-2  px-2 rounded-xl shadow-md py-2 '>
             <div className='w-[95%] mx-auto pt-2 relative'>
-                <div className='w-full flex justify-between items-center pb-4'>
+                <div className='w-full flex justify-between items-center py-4'>
                     <div className='w-full flex justify-start'>
                         <h1 className='text-[18px] md:text-[20px] font-[500]'>Events</h1>
                     </div>
