@@ -64,8 +64,8 @@ const TaskLog = () => {
             </div>
 
             {/* mobile view */}
-            <div className='sm:hidden col-start-1 col-end-4 row-start-1 md:row-end-3 bg-white w-full flex flex-col items-center px-6 rounded-xl shadow-md pb-2'>
-                <div className='w-full'>
+            <div className='sm:hidden col-start-1 col-end-4 row-start-1 md:row-end-3 bg-white w-full flex flex-col items-center  rounded-xl shadow-md pb-2'>
+                <div className='w-[85%] mx-auto'>
                     <div className='w-full flex items-end pb-3 gap-2'>
                         <div className='w-full pt-4'>
                             <h1 className='text-[18px] md:text-[20px] font-[500]'>Task Log</h1>
